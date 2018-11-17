@@ -72,6 +72,11 @@ public class CircleImageView extends View {
         mImpl.onCircleDraw(canvas, mTranslateLen);
     }
 
+    /***
+     * 注释后显示View大小，跑马灯效果不变
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (mBitmap != null) {
@@ -96,9 +101,9 @@ public class CircleImageView extends View {
     public void startAnim() {
         int transValue;
         if (mCircleModel.transModel == 1) {
-            transValue = mBitmap.getWidth();
+            transValue = getWidth();
         } else {
-            transValue = mBitmap.getHeight();
+            transValue = getHeight();
         }
         ValueAnimator valueAnimator = ValueAnimator.ofInt(0, transValue);
         valueAnimator.setDuration(mAnimDuration);

@@ -10,6 +10,5 @@
 - setRepeatCount(int repeatCount)   设置动画重复次数
 - setCircleModel()  设置跑马灯模式，有四种。 TOP LEFT RIGHT BOTTOM
 
-> 注意： CircleImageView 的onMeasure() 返回的是Bitmap的大小。而且跑马灯也是
-依据Bitmap大小实现的。如果使用需要根据项目实际情况做出修改。但跑马灯效果的核心代码
+> 注意： CircleImageView 的onMeasure() 返回的是Bitmap的大小。如果使用需要根据项目实际情况做出修改。但跑马灯效果的核心代码
 已经有所体现。
